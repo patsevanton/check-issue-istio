@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app-name: testapp
+    app-version: master-58eb4f1e
+  name: testapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app-name: testapp
+  template:
+    metadata:
+      labels:
+        app-name: testapp
+        app-version: master-58eb4f1e
+    spec:
+      containers:
+        - name: testapp
+          image: nginx:1.23-alpine
+          ports:
+            - containerPort: 8000
+              name: http
+            - containerPort: 8001
+              name: debug
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "128Mi"
+            limits:
+              cpu: "500m"
+              memory: "512Mi"

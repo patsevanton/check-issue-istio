@@ -36,4 +36,4 @@ override.tf.json
 .terraformrc
 terraform.rc
 .terraform.lock.hcl
-istio_config.yaml
+.idea
