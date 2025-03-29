@@ -2,7 +2,7 @@
 
 ##
 ```shell
-export YC_FOLDER_ID='b1gts6lhpg0oskqf7v32'
+export YC_FOLDER_ID='xxxxx'
 terraform init
 terraform apply
 ```
